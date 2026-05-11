@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "pyrootsim"
+version = "0.1.0"
+description = "Generates annotated synthetic datasets of Arabidopsis thaliana root system architectures — binary masks, per-root label images, and skeleton data — with configurable discontinuity injection (controlled occlusions producing 2, 3, or 4 connected components with OBB annotations). Ready for ML tasks such as discontinuity detection, inpainting, instance segmentation, and root graph classification."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Francisco Ribeiro Mansilha"},
+]
+keywords = [
+    "root system architecture",
+    "synthetic data",
+    "plant phenotyping",
+    "arabidopsis",
+    "segmentation",
+    "computer vision",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = [
+    "numpy>=2.0",
+    "opencv-python>=4.10",
+    "Pillow>=11.0",
+    "scipy>=1.14",
+    "scikit-image>=0.24",
+    "tqdm>=4.66",
+    "pandas>=2.2",
+    "scikit-learn>=1.5",
+]
+
+[project.optional-dependencies]
+tutorial = [
+    "matplotlib>=3.5",
+    "jupyter",
+]
+dev = [
+    "matplotlib>=3.5",
+    "jupyter",
+    "pytest",
+    "build",
+    "twine",
+]
+
+[project.urls]
+Repository = "https://github.com/FranciscoRMansilha/PyRootSim"
+
+[tool.setuptools.packages.find]
+where = ["src"]
