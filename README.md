@@ -6,6 +6,8 @@ PyRootSim is an open-source Python package that generates annotated synthetic da
 
 Default configurations approximate *Arabidopsis thaliana* morphology based on visual references. They have **not** been validated by a plant scientist and should not be treated as biologically calibrated.
 
+![image](examples/Pipeline-Overview.png)
+
 ## Installation
 
 ```bash
